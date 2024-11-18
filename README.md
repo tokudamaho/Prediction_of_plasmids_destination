@@ -15,9 +15,12 @@ Figure S1で作成したデンドログラムは，Dendrogram.pyのスクリプ�
 Figure 2B，S2のバイオリン図および機械学習の特徴量として使用した，k-mer頻度の算出には，k-merfreq.both.pyを使用した．入力したプラスミド配列はk-mer_calculationディレクトリ内に，染色体塩基配列（ドラフトゲノムを含む）はFigshareに格納した．
 出力ファイルはFigshareの＊＊＊に該当する．
 
-**violin_histogram**
+**destination_prediction**
 
-Figure 2を描いたスクリプト
-Figure 2Aはhistogram.py, Figure 2B, S2はviolin.pyを用いて描いた．
-Figure 2B, S2にはk-mer_calculationによって出力したファイル＊＊＊を入力した．
+plasmid destinationの予測は，Model_construction, Cross-validation test, destination_predictionの3つのステップで行った．
+
+**Model_construction**
+
+
+
 
