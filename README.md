@@ -19,10 +19,12 @@ The prediction of plasmid destinations was conducted in three step: **Model_cons
 
 ### Model_construction
 Using the results of **k-merfreq_both.py**, the differences in k-mer compositions between 14 plasmids and 127 bacterial chromsomes recipient candidates were calculated. Then, **data_preparation3.py** (input and output files should be designed in the script) was used to combine the two csv files with the results of conjugation assays (**labels2.csv**) to create matrices for each k-mer. 
-
-### Cross-validation_test
 To tune the model parameters, the **grid_search.py** was executes. 
 usage: python grid_search.py <input_file data_with_labelsk2.csv> <outpit_directory> 
+
+### Repeated Hold-Out Validation
+
+
 
 ### Prediction
 predictions against 127 recipient candidates can be conducted for each k-mer using **predictionk_tune.py** by providing the target plasmid sequences as input.
