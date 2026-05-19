@@ -1,6 +1,19 @@
+1. 論文タイトル
+2. 論文 DOI
+3. Figshare DOI
+4. 解析の概要
+5. 必要環境
+6. 入力データの取得方法
+7. k-mer モデルの再現方法
+8. DNABERT モデルの再現方法
+9. 新規プラスミドに対する予測方法
+10. 各ディレクトリの説明
+11. 引用方法
+
+
 # Prediction_of_plasmids_destination
 
-This page contains a script for predicting the destination of plasmids using the k-mer composition described in Tokuda et al.
+This page contains a script and dataset for predicting the destination of plasmids using the k-mer composition and DNABERT embedding described in Tokuda et al.
 
 ## **Dendrogram**
 
