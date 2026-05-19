@@ -1,7 +1,7 @@
 # Prediction_of_plasmids_destination
 
-Title:** Predicting plasmid destinations: Harnessing k-mer compositions for conjugative transfer
-DOI:** TBD
+Title:** Predicting plasmid destinations: Harnessing k-mer compositions for conjugative transfer:
+DOI:** TBD:
 This page contains a script and dataset for predicting the destination of plasmids using the k-mer composition and DNABERT embedding described in Tokuda et al.
 
 ## Data availability
