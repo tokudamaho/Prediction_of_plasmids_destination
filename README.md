@@ -54,7 +54,6 @@ The output files correspond to "plasmid_kmer.csv" and "host_kmer.csv" for 14 pla
 ### Model_construction
 **02_kmer_train_gridsearch.py** trains Random Frest models using k-mer composition differences as input features. Separated models are constructed for each k-mer lemgth from k = 2 to 7.
 Model performance is ecaluated using nested cross-validation, and hyperparameters are optimized by grid search.
-usage: python grid_search.py <input_file data_with_labelsk2.csv> <outpit_directory> 
 **02_2_eval_group.py** evaluates the trained k-mer models using group-based data splitting by plasmid or recipient. 
 It is used to assess how well the models generalize to plasmids or recipients that were not included in the training data (Supplemental section 4).
 **03_compare_voting.py** compares the prediction performance of individual k-mer models and the hard-voting ensemble model. 
