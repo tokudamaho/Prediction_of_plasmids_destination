@@ -1,24 +1,51 @@
-1. 論文タイトル
-2. 論文 DOI
-3. Figshare DOI
-4. 解析の概要
-5. 必要環境
-6. 入力データの取得方法
-7. k-mer モデルの再現方法
-8. DNABERT モデルの再現方法
-9. 新規プラスミドに対する予測方法
-10. 各ディレクトリの説明
-11. 引用方法
-
-
 # Prediction_of_plasmids_destination
 
+Title:** TBD
+DOI:** TBD
 This page contains a script and dataset for predicting the destination of plasmids using the k-mer composition and DNABERT embedding described in Tokuda et al.
+
+## Data availability
+
+Large data files are not included in this GitHub repository.  
+The datasets and trained models associated with this study are available from Figshare:
+
+**Figshare DOI:** TBD
+
+After publication, this section will be updated with the final Figshare DOI.
+
+The Figshare dataset includes:
+- experimental conjugation assay results
+- 127 recipient metadata
+- k-mer feature matrices for plasmid and chromosomes
+- k-mer features matrices for prediction (canonical k-mer)
+- DNABERT-derived feature matrices
+
+## Overview of the analysis
+
+This repository contains analysis scripts used in the manuscript:
+
+**Tokuda et al. “***Predicting plasmid destinations: Harnessing k-mer compositions for conjugative transfer***”**
+
+In this study, we developed sequence-based machine learning models to predict plasmid destinations during conjugative transfer. Plasmid destinations were defined based on one-on-one conjugation assay results, in which recipient strains that acquired a plasmid were treated as destination-positive and those with no detected plasmid acquisition were treated as destination-negative.
+
+The computational analyses include:
+
+1. construction of dendrogram based on  plasmid k-mer compositions;
+2. calculation of k-mer composition features from genomes;
+3. construction of plasmid–recipient feature matrices (k-mer compositions and DNABERT-derived embedding;
+4. training and evaluation of random forest models;
+
+Large input datasets, trained models, prediction outputs, and supplementary files are deposited on Figshare. 
+This GitHub repository is intended to document the computational workflow and provide the scripts used for the analyses reported in the manuscript.
+
 
 ## **Dendrogram**
 
-The dendrogram shown in FigureS1 was genarated using **Dendrogram.py**.
+The dendrogram shown in FigureS2 was genarated using **Dendrogram.py**.
 The input data for this script (plasmid fasta files) stored in plasmids_fasta directory were used. 
+
+## **phylogenetic analysis**
+
 
 ## **k-mer_calculation**
 
