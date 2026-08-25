@@ -49,7 +49,7 @@ The input data for this script (plasmid fasta files) stored in plasmids_fasta di
 ## **k-mer model**
 ### **k-mer_calculation**
 The k-mer composiitons used for generating the violin plot in Figure 2B, as well as for features of machine learning, were calculated using **01_cal_kmers.py**. 
-For features of machine learning, to use canonical k-mer, **01_cal_kmers_canonical.py** was used to calculate.
+For features of machine learning, canonical k-mer freqency were calculated using **01_cal_kmers_canonical.py** and **canonical.py**.
 The input plasmid seqences are stored in k-mer_calculation directory, while 127 chromosomal sequences of recipient candidates have been uploaded in Figshare.
 The output files correspond to "plasmid_kmer.csv" and "host_kmer.csv" for 14 plasmids and 127 recipient candidates, respectively. 
 
