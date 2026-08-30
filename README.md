@@ -25,7 +25,7 @@ The Figshare dataset includes:
 
 This repository contains analysis scripts used in the manuscript:
 
-**Tokuda et al. “***Predicting plasmid destinations: Harnessing k-mer compositions for conjugative transfer***”**
+**Tokuda et al. “***Predicting plasmid destinations: Harnessing k-mer compositions for conjugative transfer inference***”**
 
 In this study, we developed sequence-based machine learning models to predict plasmid destinations during conjugative transfer. Plasmid destinations were defined based on one-on-one conjugation assay results, in which recipient strains that acquired a plasmid were treated as destination-positive and those with no detected plasmid acquisition were treated as destination-negative.
 
