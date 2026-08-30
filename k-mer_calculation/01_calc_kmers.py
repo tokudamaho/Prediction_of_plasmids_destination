@@ -13,8 +13,8 @@ HOST_DIR = "data/fna_127"          # ホストのフォルダ
 PLASMID_DIR = "data/allplasmids"  # プラスミドのフォルダ
 OUTPUT_DIR = "results/kmer/kmer_features"  # 出力先フォルダ
 
-# kの範囲 (2-7)
-K_RANGE = range(2, 8)
+# kの範囲 (2-8)
+K_RANGE = range(2, 9)
 # =================================================
 
 def get_reverse_complement(seq):
