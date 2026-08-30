@@ -84,4 +84,10 @@ Predictions against the 127 recipient candidates can be performed for each query
 The script calculates a DNABERT embedding vector from the input plasmid sequence, combines it with precomputed recipient genome vectors, and applies the trained `Diff`, `AbsDiff`, and `Prod` models to each recipient. 
 The output includes predicted probabilities and binary predictions for each DNABERT feature representation.
 
-
+Expected data directory:
+data/
+├── pairs_converted.csv
+├── fna_127/
+├── allplasmids/
+├── host_vectors.csv
+└── trainplasmid_vectors.csv
