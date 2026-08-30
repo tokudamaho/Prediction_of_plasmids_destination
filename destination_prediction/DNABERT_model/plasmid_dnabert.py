@@ -9,8 +9,8 @@ from tqdm import tqdm
 # 設定
 CHUNK_SIZE = 510
 STRIDE = 256
-INPUT_DIR = "allplasmids2"   # プラスミドのフォルダ
-OUTPUT_FILE = "plasmid_vectors.csv"
+INPUT_DIR = "data/allplasmids2"   # プラスミドのフォルダ
+OUTPUT_FILE = "data/trainedplasmid_vectors.csv"
 
 # モデル準備
 tokenizer = AutoTokenizer.from_pretrained("zhihan1996/DNA_bert_6")
