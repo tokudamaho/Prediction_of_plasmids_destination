@@ -48,22 +48,21 @@ The input data for this script (plasmid fasta files) stored in plasmids_fasta di
 
 ## **k-mer model**
 ### **k-mer_calculation**
-The k-mer composiitons used for generating the violin plot in Figure 2B, as well as for features of machine learning, were calculated using **01_cal_kmers.py**. 
+The k-mer composiitons used for generating the violin plot in Figure 2B, as well as for features of machine learning, were calculated using **01_calc_kmers.py**. 
 For features of machine learning, canonical k-mer freqency were calculated using **01_cal_kmers_canonical.py** and and subsequently converted to canonical k-mer features using **canonical.py**.
 The input plasmid seqences are stored in k-mer_calculation directory, while 127 chromosomal sequences of recipient candidates have been uploaded in Figshare.
 The output files correspond to "plasmid_kmer.csv" and "host_kmer.csv" for 14 plasmids and 127 recipient candidates, respectively. 
 
 ### Model_construction
-**02_kmer_train_gridsearch.py** trains Random Frest models using k-mer composition differences as input features. Separated models are constructed for each k-mer lemgth from k = 2 to 7.
+**02_kmer_train_gridsearch_cano.py** trains Random Frest models using k-mer composition differences as input features. Separated models are constructed for each k-mer lemgth from k = 2 to 7.
 Model performance is ecaluated using nested cross-validation, and hyperparameters are optimized by grid search.
-**02_2_eval_group.py** evaluates the trained k-mer models using group-based data splitting by plasmid or recipient. 
+**02_2_eval_group_cano.py** evaluates the trained k-mer models using group-based data splitting by plasmid or recipient. 
 It is used to assess how well the models generalize to plasmids or recipients that were not included in the training data (Supplemental section 4).
-**03_compare_voting.py** compares the prediction performance of individual k-mer models and the hard-voting ensemble model. 
+**03_compare_voting_cano.py** compares the prediction performance of individual k-mer models and the hard-voting ensemble model. 
 Predictions from the k = 2 to k = 7 models are treated as votes, and performance metrics such as accuracy, F1 score, precision, recall, and AUC are compared while varying the number of positive votes required for a final positive prediction.
 
 ### Prediction
-The predictions against 127 recipient candidates can be conducted for each k-mer using **04_predict_destination.py** by providing the target plasmid sequences as input.
-For batch predictions involving multiple plasmids,**04_predict_folder.py** can be used execute all predictions at once.
+The predictions against 127 recipient candidates can be conducted for each k-mer using **04_predict_folder_cano.py** by providing the target plasmid sequences as input.
 The outputs include votes from individual k-mer models, total vote counts, vote fractions, and final predictions under different voting thresholds.
 Due to their large size, the files "plasmid_kmer.csv" and "host_kmer.csv" have been uploaded to Figshare. 
 
