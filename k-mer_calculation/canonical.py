@@ -91,7 +91,7 @@ def main():
     ap = argparse.ArgumentParser(
         description="現存k-mer CSVを再計算なしでcanonical k-mer化して保存します（*_canonical.csv）。"
     )
-    ap.add_argument("--input_dir", default="results/kmer_features", help="入力CSVがあるフォルダ")
+    ap.add_argument("--input_dir", default="results/kmer/kmer_features", help="入力CSVがあるフォルダ")
     ap.add_argument("--pattern", default="*.csv", help="対象CSVのglobパターン（例: 'host_*mer.csv'）")
     ap.add_argument("--suffix", default="_canonical", help="出力ファイル名に付けるサフィックス")
     ap.add_argument("--no_check", action="store_true", help="同一列チェックを無効化（高速化）")
