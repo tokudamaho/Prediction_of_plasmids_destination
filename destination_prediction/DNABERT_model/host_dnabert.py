@@ -14,8 +14,8 @@ STRIDE = 256
 BATCH_SIZE = 8   # CPU用
 
 # 入出力設定
-INPUT_DIR = "fna_127"        # ホストのフォルダ
-OUTPUT_FILE = "host_vectors.csv"
+INPUT_DIR = "data/fna_127"        # ホストのフォルダ
+OUTPUT_FILE = "data/host_vectors.csv"
 
 # -------------------------------------------------------
 # モデル準備（CPU最適化）
