@@ -1,6 +1,6 @@
 # Prediction_of_plasmids_destination
 
-**Title:** Predicting plasmid destinations: Harnessing k-mer compositions for conjugative transfer inherence
+**Title:** Predicting plasmid destinations: Harnessing k-mer compositions for conjugative transfer inference
 
 **DOI:** TBD
 
