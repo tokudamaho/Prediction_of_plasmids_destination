@@ -48,10 +48,10 @@ The input data for this script (plasmid fasta files) stored in plasmids_fasta di
 
 ## **k-mer model**
 ### **k-mer_calculation**
-The k-mer composiitons used for generating the violin plot in Figure 2B, as well as for features of machine learning, were calculated using **01_calc_kmers.py**. 
+The k-mer composiitons used for generating the violin plot in Figure 3B, as well as for features of machine learning, were calculated using **01_calc_kmers.py**. 
 For features of machine learning, canonical k-mer freqency were calculated using **01_cal_kmers_canonical.py** and subsequently converted to canonical k-mer features using **canonical.py**.
 The input plasmid seqences are stored in k-mer_calculation directory, while 127 chromosomal sequences of recipient candidates have been uploaded in Figshare.
-The output files correspond to "plasmid_kmer.csv" and "host_kmer.csv" for 14 plasmids and 127 recipient candidates, respectively. 
+Output files are generated separately for each k, e.g., host_2mer.csv–host_7mer.csv and plasmid_2mer.csv–plasmid_7mer.csv. for 14 plasmids and 127 recipient candidates, respectively. 
 
 ### Model_construction
 **02_kmer_train_gridsearch_cano.py** trains Random Frest models using k-mer composition differences as input features. Separated models are constructed for each k-mer lemgth from k = 2 to 7.
@@ -74,7 +74,7 @@ The resulting 768-dimensional vectors are saved as `host_vectors.csv` and used a
 
 ### Model_construction
 The DNABERT-based prediction models were constructed using two main scripts. **02_train_dnabert.py** was used to train Random Forest models using DNABERT-derived sequence embeddings. 
-Choromosome vectors and plasmid vectors were combined with plasmid–chromosome pair labels ("pair_converted.csv"), and three types of pairwise feature representations were generated: Difference (`Diff`), Absolute Difference (`AbsDiff`), and element-wise Product (`Prod`). 
+Choromosome vectors and plasmid vectors were combined with plasmid–chromosome pair labels ("pairs_converted.csv"), and three types of pairwise feature representations were generated: Difference (`Diff`), Absolute Difference (`AbsDiff`), and element-wise Product (`Prod`). 
 A separate Random Forest model was trained for each representation. Model performance was evaluated using nested cross-validation, and hyperparameters were optimized by grid search.
 **02_2_dnabert_eval_random_and_group.py** was used to evaluate the generalization performance of the DNABERT-based models. 
 This script performed group-based cross-validation by grouping samples either by plasmid or by recipient. 
